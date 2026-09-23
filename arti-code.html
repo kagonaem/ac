@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ARTI CODE — دراسة مشروع</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0f1115; --card:#171a21; --card2:#1d212a; --text:#e9edf3; --muted:#9aa4b2;
+  --accent:#3ec6a8; --accent2:#f2b544; --line:#2a2f3a;
+}
+@media (prefers-color-scheme: light){
+  :root:not([data-theme="dark"]){
+    --bg:#f6f7f9; --card:#ffffff; --card2:#f0f2f5; --text:#161a1f; --muted:#5a6472;
+    --accent:#0f8f76; --accent2:#c97e00; --line:#e3e6ec;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0f1115; --card:#171a21; --card2:#1d212a; --text:#e9edf3; --muted:#9aa4b2;
+  --accent:#3ec6a8; --accent2:#f2b544; --line:#2a2f3a;
+}
+*{box-sizing:border-box}
+html{scroll-padding-top:calc(70px + env(safe-area-inset-top,0px));}
+body{
+  margin:0;background:var(--bg);color:var(--text);
+  font-family:'Cairo','Segoe UI',Tahoma,Arial,sans-serif;line-height:1.9;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+header{
+  position:sticky;top:0;top:env(safe-area-inset-top,0px);z-index:20;
+  background:color-mix(in srgb, var(--bg) 88%, transparent);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
+}
+header h1{font-size:1.15rem;margin:0;color:var(--accent)}
+header span{color:var(--muted);font-size:.85rem}
+nav{overflow-x:auto;white-space:nowrap;padding:10px 20px;border-bottom:1px solid var(--line);background:var(--card2)}
+nav a{color:var(--muted);text-decoration:none;font-size:.85rem;margin-inline-end:16px;padding:4px 2px}
+nav a:hover{color:var(--accent)}
+main{max-width:920px;margin:0 auto;padding:28px 20px 80px}
+section{margin-bottom:34px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 24px;scroll-margin-top:120px}
+section h2{margin-top:0;color:var(--accent);font-size:1.2rem;display:flex;align-items:center;gap:8px}
+section h2 .num{background:var(--accent);color:#06231c;border-radius:8px;padding:2px 10px;font-size:.9rem}
+h3{color:var(--accent2);font-size:1rem;margin:18px 0 8px}
+p{color:var(--text);margin:8px 0}
+ul,ol{margin:8px 0;padding-inline-start:22px}
+li{margin:4px 0}
+.muted{color:var(--muted)}
+table{width:100%;border-collapse:collapse;margin:12px 0;overflow-x:auto;display:block}
+table thead,table tbody{display:table;width:100%;table-layout:fixed}
+th,td{border:1px solid var(--line);padding:9px 10px;text-align:right;font-size:.92rem}
+th{background:var(--card2);color:var(--accent)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media (max-width:640px){.grid2{grid-template-columns:1fr}}
+.pill{display:inline-block;background:var(--card2);border:1px solid var(--line);border-radius:20px;padding:3px 12px;font-size:.82rem;margin:3px;color:var(--muted)}
+.pkg{border:1px solid var(--line);border-radius:12px;padding:16px;background:var(--card2)}
+.pkg h4{margin:0 0 6px;font-size:1rem}
+.pkg .price{color:var(--accent2);font-weight:700}
+.badge-green{color:#3ec6a8}
+.badge-yellow{color:#f2b544}
+.badge-red{color:#e2685f}
+blockquote{border-inline-start:4px solid var(--accent);margin:14px 0;padding:8px 16px;background:var(--card2);border-radius:0 8px 8px 0;color:var(--muted)}
+footer{text-align:center;color:var(--muted);font-size:.82rem;padding:30px 20px}
+</style>
+</head>
+<body>
+<header>
+  <h1>ARTI CODE</h1>
+  <span>أكاديمية برمجة + Media &amp; Digital Agency — دراسة مشروع (نسخة تخطيطية أولية 2026)</span>
+</header>
+<nav>
+  <a href="#s1">الملخص</a><a href="#s2">رأس المال</a><a href="#s3">المكان</a><a href="#s5">الفريق</a>
+  <a href="#s6">الأكاديمية</a><a href="#s9">Media</a><a href="#s12">المعدات</a><a href="#s16">التعادل</a>
+  <a href="#s18">المخاطر</a><a href="#s20">التسويق</a><a href="#s22">أول 3 شهور</a><a href="#s23">KPIs</a><a href="#s26">الخلاصة</a>
+</nav>
+<main>
+
+<section id="s1">
+  <h2><span class="num">1</span> الملخص التنفيذي</h2>
+  <p>مشروع ARTI CODE عبارة عن مكان من دورين يجمع بين نشاطين متكاملين:</p>
+  <div class="grid2">
+    <div>
+      <h3>🎓 أكاديمية برمجة تقدم</h3>
+      <ul><li>Web Development</li><li>Python</li><li>Frontend</li><li>Full Stack</li><li>AI Tools</li><li>Programming for Kids</li><li>Workshops</li><li>محاضرات وفعاليات تقنية</li></ul>
+    </div>
+    <div>
+      <h3>🎥 Media &amp; Digital Agency تقدم</h3>
+      <ul><li>تصوير Product Photography</li><li>Reels</li><li>Video Editing</li><li>Graphic Design</li><li>Social Media Management</li><li>Content Writing</li><li>Paid Ads</li><li>Websites / Landing Pages / E-commerce</li><li>Automation / AI Solutions</li></ul>
+    </div>
+  </div>
+  <blockquote>الفكرة الأساسية: المشروع لا يعتمد على مصدر دخل واحد بل على 3 مصادر رئيسية: <b>Education + Media + Digital Services</b></blockquote>
+</section>
+
+<section id="s2">
+  <h2><span class="num">2</span> رأس المال المتاح</h2>
+  <p>رأس المال المخصص للمعدات: <b>200,000 جنيه</b> — مخصص للمعدات والتجهيزات التشغيلية الأساسية فقط.</p>
+  <p>التشطيبات <b>غير محسوبة</b> ضمن الـ200,000 جنيه، وسيتم تحديدها بعد: اختيار المكان، معاينة حالته، تحديد التصميم ومستوى التشطيب، واحتياجات الكهرباء والشبكة والتكييف والعزل الصوتي.</p>
+  <blockquote>مهم: لا يُنصح بصرف كل الـ200,000 جنيه على المعدات، بل يجب الاحتفاظ بجزء منها كاحتياطي.</blockquote>
+</section>
+
+<section id="s3">
+  <h2><span class="num">3-4</span> تقسيم المكان (دورين)</h2>
+  <div class="grid2">
+    <div>
+      <h3>الدور الأول — Media &amp; Digital</h3>
+      <ul><li>Reception لاستقبال العملاء والزوار</li><li>Studio للتصوير (منتجات، Reels، Personal Branding، إعلانات، محتوى Social Media)</li><li>Editing Room (Video Editing، Graphic Design، Motion Graphics)</li><li>Meeting Area لاجتماعات العملاء</li><li>Management Office لإدارة الشريكين</li><li>Storage للكاميرات والإضاءة والميكروفونات والمعدات</li></ul>
+    </div>
+    <div>
+      <h3>الدور الثاني — Academy</h3>
+      <ul><li>Computer Lab لأجهزة الطلاب</li><li>Classroom للكورسات والمحاضرات</li><li>Small Classroom للمجموعات الصغيرة والـWorkshops</li><li>Instructor Area لتجهيز المدرسين والمحتوى</li><li>Waiting Area لانتظار الطلاب وأولياء الأمور</li></ul>
+    </div>
+  </div>
+</section>
+
+<section id="s5">
+  <h2><span class="num">5</span> فريق العمل</h2>
+  <div class="grid2">
+    <div><h3>الشريك الأول</h3><ul><li>إدارة المشروع</li><li>المبيعات</li><li>متابعة العملاء</li><li>تطوير قسم Media</li><li>العلاقات مع العملاء</li></ul></div>
+    <div><h3>الشريك الثاني</h3><ul><li>إدارة الأكاديمية</li><li>تنظيم الكورسات</li><li>متابعة الطلاب</li><li>التسويق</li><li>متابعة المدرسين</li></ul></div>
+  </div>
+  <h3>الموظفون في البداية</h3>
+  <ul>
+    <li><b>الموظف الأول</b> — Video Editor / Content Creator: مونتاج الفيديو، Reels، محتوى Social Media</li>
+    <li><b>الموظف الثاني</b> — Graphic Designer / Social Media: التصميم، Social Media، كتابة وتنظيم المحتوى</li>
+  </ul>
+  <h3>Freelancers (بدل توظيف عدد كبير من البداية)</h3>
+  <p><span class="pill">Programming Instructors</span><span class="pill">Photographers</span><span class="pill">Motion Designers</span><span class="pill">Performance Marketers</span><span class="pill">Developers</span><span class="pill">Specialized Editors</span></p>
+  <p class="muted">يتم التعاقد معهم حسب المشروع أو الكورس.</p>
+</section>
+
+<section id="s6">
+  <h2><span class="num">6-8</span> الأكاديمية</h2>
+  <p>لا يُفضل إطلاق عدد كبير من الكورسات في البداية.</p>
+  <p><b>المرحلة الأولى:</b> كورس 1 Web Development — كورس 2 Python. بعد إثبات الطلب يُضاف: Frontend, Full Stack, AI Tools, Kids Coding.</p>
+  <h3>أسعار الكورسات المقترحة (مبدئية للاختبار)</h3>
+  <table>
+    <thead><tr><th>الكورس</th><th>السعر المقترح (جنيه)</th></tr></thead>
+    <tbody>
+      <tr><td>Web Development</td><td>2,000–3,000</td></tr>
+      <tr><td>Python</td><td>2,000–3,000</td></tr>
+      <tr><td>Frontend</td><td>2,500–3,500</td></tr>
+      <tr><td>Full Stack</td><td>2,500–3,500+</td></tr>
+      <tr><td>AI Tools</td><td>1,500–2,500</td></tr>
+      <tr><td>Kids Coding</td><td>1,500–2,500</td></tr>
+    </tbody>
+  </table>
+  <p class="muted">السعر النهائي يعتمد على: عدد الساعات، مستوى المدرب، المحتوى، عدد الطلاب، المنافسين، مستوى المكان.</p>
+  <h3>مثال إيرادات الكورس</h3>
+  <p>15 طالب × 2,500 جنيه = <b>37,500 جنيه</b> لكل مجموعة. لو تم تشغيل 4 مجموعات بنفس المتوسط: 37,500 × 4 = <b>150,000 جنيه</b>.</p>
+  <p class="muted">هذا مثال تخطيطي وليس ضمانًا للإيرادات — الإيراد الحقيقي يعتمد على عدد المجموعات ونسبة امتلائها.</p>
+</section>
+
+<section id="s9">
+  <h2><span class="num">9-11</span> Media &amp; Digital Agency</h2>
+  <p>يُفضل وجود 3 باقات واضحة:</p>
+  <div class="grid2">
+    <div class="pkg"><h4 class="badge-green">🟢 Basic — <span class="price">~6,000 جنيه</span></h4>
+      <ul><li>إدارة منصتين</li><li>8–12 Post</li><li>2–4 Reels</li><li>كتابة المحتوى</li><li>تصميم ونشر</li><li>تقرير شهري</li></ul></div>
+    <div class="pkg"><h4 class="badge-yellow">🟡 Growth — <span class="price">~10,000 جنيه</span></h4>
+      <ul><li>3 منصات</li><li>12–16 Post</li><li>4–6 Reels</li><li>تصوير دوري</li><li>Design + Copywriting</li><li>تحليل النتائج</li></ul></div>
+  </div>
+  <div class="pkg" style="margin-top:14px"><h4 class="badge-red">🔴 Pro — <span class="price">15,000–20,000+ جنيه</span></h4>
+    <ul><li>3–4 منصات</li><li>تصوير احترافي</li><li>عدد أكبر من Reels</li><li>Content Strategy</li><li>إدارة حملات</li><li>تقارير واجتماعات ومتابعة مستمرة</li></ul>
+    <p class="muted">ميزانية الإعلانات منفصلة عن أتعاب ARTI CODE.</p></div>
+
+  <h3>الخدمات المنفصلة</h3>
+  <p class="muted">ليس كل عميل يحتاج اشتراكًا شهريًا — يمكن بيع خدمات منفصلة:</p>
+  <p><span class="pill">Product Photography</span><span class="pill">Restaurant Photography</span><span class="pill">Reels</span><span class="pill">Personal Branding</span><span class="pill">Video Editing</span><span class="pill">Advertising Videos</span><span class="pill">Graphic Design</span><span class="pill">Motion Graphics</span><span class="pill">Social Media Content</span></p>
+
+  <h3>الخدمات البرمجية — فرصة زيادة قيمة العميل</h3>
+  <p class="muted">مثال: مطعم يبدأ بـ Photography + Reels ← ثم Social Media Management ← ثم Website ← ثم Online Ordering ← ثم WhatsApp Integration ← ثم Paid Ads ← ثم Automation / AI. العميل الذي كان يدفع مقابل خدمة واحدة يتحول لعميل طويل المدى.</p>
+</section>
+
+<section id="s12">
+  <h2><span class="num">12</span> المعدات</h2>
+  <p>رأس المال المتاح للمعدات: 200,000 جنيه — الأفضل عدم شراء معدات ضخمة من البداية.</p>
+  <table>
+    <thead><tr><th>البند</th><th>التكلفة التقريبية (جنيه)</th></tr></thead>
+    <tbody>
+      <tr><td>Camera + Lens</td><td>50,000–60,000</td></tr>
+      <tr><td>Wireless Microphone</td><td>12,000–15,000</td></tr>
+      <tr><td>LED Lighting (Lights + Softboxes + Stands)</td><td>18,000–25,000</td></tr>
+      <tr><td>Tripod + Memory Cards + Batteries</td><td>10,000–15,000</td></tr>
+      <tr><td>Backgrounds + Accessories</td><td>8,000–12,000</td></tr>
+      <tr><td>Editing PC / Workstation</td><td>50,000–65,000</td></tr>
+    </tbody>
+  </table>
+  <blockquote>أهم قاعدة: لا تُصرف الـ200,000 جنيه بالكامل على المعدات. المعدات المتخصصة (كاميرات إضافية، Lenses غالية، Gimbal، إضاءة كبيرة، معدات سينمائية) تُؤجَّر للمشاريع الكبيرة بدل شرائها من البداية.</blockquote>
+  <h3>تجهيز الأكاديمية (13)</h3>
+  <p class="muted">بدل 15 جهاز + 15 شاشة وكل التجهيزات، يمكن البدء بعدد أقل ثم التوسع. الأولوية: أجهزة أساسية، Network/Internet، Projector، Whiteboard، كراسي ومكاتب، UPS، كاميرات مراقبة — ثم زيادة الأجهزة مع زيادة الطلب.</p>
+  <h3>التشطيبات (14)</h3>
+  <p class="muted">ميزانية منفصلة عن الـ200,000 جنيه، على 3 مستويات: <b>Economy</b> (نظيف وعملي)، <b>Medium</b> (احترافي)، <b>Premium</b> (Branding قوي). أهمها: دهانات، ديكور Reception، إضاءة، لافتات، كهرباء، Network، تكييف، ستائر، عزل صوتي، مكاتب وكراسي. القرار النهائي بعد معاينة المكان.</p>
+</section>
+
+<section id="s15">
+  <h2><span class="num">15-17</span> المصاريف والإيرادات</h2>
+  <p><b>المصاريف الشهرية</b> تشمل: الإيجار، رواتب الموظفين، أجور المدرسين، الكهرباء، التكييف، الإنترنت، Software (Adobe وغيرها)، Marketing، Maintenance، Transportation، Shooting Expenses، Accounting، الالتزامات القانونية، Emergency Expenses — وتُقسّم إلى Fixed Costs و Variable Costs.</p>
+  <p><b>الإيرادات</b> تُقسّم إلى: Education (الكورسات)، Media (اشتراكات شهرية)، Projects (مشاريع منفصلة)، Digital Services (Websites, E-commerce, Automation, AI) — تنوّع يقلل الاعتماد على مصدر واحد.</p>
+</section>
+
+<section id="s16">
+  <h2><span class="num">16</span> نقطة التعادل (Break-even)</h2>
+  <p class="muted">لا يمكن تحديدها بدقة حاليًا بدون معرفة الإيجار، الرواتب، أجور المدرسين، الكهرباء، البرامج، التسويق، وباقي المصاريف.</p>
+  <blockquote>Break-even Point = Fixed Costs ÷ Contribution Margin</blockquote>
+  <p>بعد تحديد تكاليف المكان يمكن حساب كم طالب وكم عميل Media نحتاج حتى يغطي المشروع مصاريفه بالكامل.</p>
+</section>
+
+<section id="s18">
+  <h2><span class="num">18</span> المخاطر والحلول</h2>
+  <table>
+    <thead><tr><th>المشكلة</th><th>الحل</th></tr></thead>
+    <tbody>
+      <tr><td>عدد الطلاب قليل</td><td>محاضرات مجانية + محتوى + إعلانات</td></tr>
+      <tr><td>قلة عملاء الميديا</td><td>Portfolio + عروض + Case Studies</td></tr>
+      <tr><td>المعدات غالية</td><td>شراء الأساسي وتأجير المتخصص</td></tr>
+      <tr><td>موظف ضعيف</td><td>Test + Portfolio + فترة تجربة</td></tr>
+      <tr><td>تعديلات كثيرة</td><td>تحديد عدد التعديلات بالعقد</td></tr>
+      <tr><td>تأخر الدفع</td><td>مقدم أو دفع بداية الشهر</td></tr>
+      <tr><td>غياب المدرس</td><td>مدرس بديل</td></tr>
+      <tr><td>المنافسة قوية</td><td>تخصص واضح + جودة + نتائج</td></tr>
+      <tr><td>الاعتماد على عميل واحد</td><td>توزيع العملاء</td></tr>
+      <tr><td>خلاف الشركاء</td><td>عقد شراكة واضح</td></tr>
+      <tr><td>سحب أموال من المشروع</td><td>حساب منفصل</td></tr>
+      <tr><td>المصاريف مرتفعة</td><td>مراجعة مالية شهرية</td></tr>
+      <tr><td>ضعف الجودة</td><td>مراجعة كل مشروع</td></tr>
+      <tr><td>تأخر التسليم</td><td>جدول تسليم ومسؤول واضح</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="s19">
+  <h2><span class="num">19</span> أهم نقطة بين الشريكين</h2>
+  <blockquote>حتى لو الشريكين أصدقاء جدًا — لازم <b>عقد شراكة</b>.</blockquote>
+  <p>يحدد: نسبة كل شريك، رأس مال كل شريك، مسؤولية كل شريك، توزيع الأرباح، المرتبات، المسحوبات، ملكية المعدات، ملكية اسم ARTI CODE، ملكية الملفات والمحتوى، من يتخذ القرار، كيفية حل الخلاف، خروج أحد الشركاء، دخول شريك جديد، وماذا يحدث في حالة الخسارة.</p>
+</section>
+
+<section id="s20">
+  <h2><span class="num">20-21</span> خطة التسويق والافتتاح</h2>
+  <p class="muted">قبل الافتتاح بحوالي شهر — Social Media (Facebook, Instagram, TikTok):</p>
+  <div class="grid2">
+    <div><h3>محتوى الأكاديمية</h3><ul><li>Programming Tips</li><li>أخطاء المبتدئين</li><li>مشاريع الطلاب</li><li>شرح قصير Videos للمدرسين</li><li>عروض الكورسات</li><li>تحديات برمجية</li></ul></div>
+    <div><h3>محتوى Media Agency</h3><ul><li>Before / After</li><li>Behind The Scenes</li><li>Product Photography Reels</li><li>Editing Case Studies</li><li>نتائج العملاء</li></ul></div>
+  </div>
+  <h3>الافتتاح</h3>
+  <p>Free Workshop أو Open Day أو Free Programming Session مع عرض افتتاح محدود. الهدف ليس الخصم فقط، بل إدخال الناس للمكان + بناء الثقة + تجربة الخدمة + تحويلهم لعملاء.</p>
+</section>
+
+<section id="s22">
+  <h2><span class="num">22</span> خطة أول 3 شهور</h2>
+  <div class="grid2">
+    <div><h3>الشهر الأول — إثبات أن السوق سيشتري</h3><ul><li>كورسين فقط</li><li>2–3 باقات Media</li><li>معدات أساسية</li><li>Freelancers + موظفين أساسيين</li><li>Marketing وبناء Portfolio</li></ul></div>
+    <div><h3>الشهر الثاني — إذا تحسّنت المبيعات</h3><ul><li>زيادة مجموعات الكورسات</li><li>الوصول لـ3–5 عملاء Media</li><li>Case Studies وتصوير أعمال العملاء</li><li>تحسين الأسعار</li></ul></div>
+  </div>
+  <h3>الشهر الثالث — إذا ظهرت نتائج جيدة</h3>
+  <ul><li>إضافة كورسات</li><li>زيادة العملاء</li><li>شراء معدات جديدة عند الحاجة</li><li>زيادة الفريق تدريجيًا</li><li>تطوير الخدمات الرقمية</li></ul>
+</section>
+
+<section id="s23">
+  <h2><span class="num">23</span> مؤشرات الأداء (KPIs)</h2>
+  <div class="grid2">
+    <div><h3>Academy</h3><ul><li>عدد الطلاب</li><li>عدد المجموعات</li><li>نسبة امتلاء المجموعة</li><li>نسبة الحضور</li><li>تقييم الطلاب</li><li>نسبة إعادة التسجيل</li></ul></div>
+    <div><h3>Media</h3><ul><li>عدد العملاء</li><li>الإيرادات</li><li>نسبة تجديد العملاء</li><li>متوسط قيمة العميل</li><li>عدد المشاريع</li><li>تكلفة الحصول على العميل</li></ul></div>
+  </div>
+  <h3>Financial</h3>
+  <ul><li>إجمالي الإيرادات</li><li>إجمالي المصروفات</li><li>صافي الربح</li><li>Cash Flow</li><li>المصروفات الثابتة والمتغيرة</li></ul>
+</section>
+
+<section id="s24">
+  <h2><span class="num">24-25</span> أهم مصادر الربح والخطة المالية</h2>
+  <p>المشروع قائم على 3 أرجل: 🎓 <b>Education</b> (كورسات وطلاب) — 🎥 <b>Media</b> (اشتراكات شهرية + مشاريع) — 💻 <b>Digital</b> (Websites, E-commerce, Landing Pages, Automation, AI).</p>
+  <blockquote>الاستراتيجية: شراء الأساسي → بدء التشغيل → تحقيق الإيرادات → إعادة استثمار جزء من الأرباح → التوسع.
+  <br>بدل: شراء كل شيء → صرف رأس المال → انتظار العملاء.</blockquote>
+</section>
+
+<section id="s26">
+  <h2><span class="num">26</span> القرار الاستثماري المقترح</h2>
+  <p class="muted">قبل دفع أي مبالغ كبيرة، يجب أن يوافق الشريكان على:</p>
+  <ol>
+    <li>اختيار المكان</li>
+    <li>تحديد تكلفة الإيجار والتأمين والمقدم</li>
+    <li>تحديد مستوى التشطيب</li>
+    <li>عمل قائمة معدات فعلية وعروض أسعار</li>
+    <li>تحديد عدد أجهزة الأكاديمية في البداية</li>
+    <li>تحديد المصروف الشهري المتوقع</li>
+    <li>تحديد أسعار الكورسات والباقات</li>
+    <li>تحديد مسؤوليات كل شريك</li>
+    <li>كتابة عقد الشراكة</li>
+    <li>تحديد مبلغ احتياطي لا يُمس إلا للضرورة</li>
+  </ol>
+
+  <h2 style="margin-top:26px">⭐ الخلاصة</h2>
+  <p><b>ARTI CODE</b> — Academy + Media + Digital Solutions</p>
+  <ul>
+    <li>رأس مال المعدات: 200,000 جنيه — التشطيبات حسب المكان والتصميم</li>
+    <li>البداية: تدريجية — الأكاديمية: 2 كورس في البداية — Media: 3 باقات أساسية</li>
+    <li>المدرسون: Freelancers في البداية — المعدات: الأساسي فقط، المتخصص بالتأجير</li>
+    <li>الهدف الأول: إثبات وجود طلب حقيقي</li>
+    <li>الهدف الثاني: الوصول إلى Cash Flow مستقر</li>
+    <li>الهدف الثالث: التوسع من الأرباح وليس من استنزاف رأس المال</li>
+  </ul>
+  <blockquote>
+    أهم خطر: استنزاف رأس المال قبل ثبات الإيرادات.<br>
+    أهم حل: بداية تدريجية + احتياطي نقدي + شراء المعدات حسب الاحتياج الفعلي.<br>
+    أهم اتفاق: عقد شراكة واضح من أول يوم.
+  </blockquote>
+</section>
+
+</main>
+<footer>ARTI CODE — دراسة مشروع تخطيطية أولية، 2026</footer>
+</body>
+</html>
